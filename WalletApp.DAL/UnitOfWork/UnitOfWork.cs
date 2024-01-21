@@ -12,11 +12,11 @@ public class UnitOfWork : IUnitOfWork
     private IRepository<User> _userRepository;
     public IRepository<User> UserRepository => _userRepository ??= new GenericRepository<User>(_context);
     
-    private IRepository<Card> _customerRepository;
-    public IRepository<Card> CustomerRepository => _customerRepository ??= new GenericRepository<Card>(_context);
+    private IRepository<Card> _cardRepository;
+    public IRepository<Card> CardRepository => _cardRepository ??= new GenericRepository<Card>(_context);
     
-    private IRepository<Transaction> _courierRepository;
-    public IRepository<Transaction> CourierRepository => _courierRepository ??= new GenericRepository<Transaction>(_context);
+    private IRepository<Transaction> _transactionRepository;
+    public IRepository<Transaction> TransactionRepository => _transactionRepository ??= new GenericRepository<Transaction>(_context);
     
     public UnitOfWork(ApplicationDbContext context)
     {
