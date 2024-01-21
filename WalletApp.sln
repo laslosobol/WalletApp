@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletApp.DAL", "WalletApp.DAL\WalletApp.DAL.csproj", "{57AA0F3A-F26E-42D8-904E-89C69159A410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletApp.BLL", "WalletApp.BLL\WalletApp.BLL.csproj", "{555026A2-3F80-4DC9-9794-3F1FAED38CEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletApp.API", "WalletApp.API\WalletApp.API.csproj", "{397D06AB-009D-4AEC-B806-0A67580474DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57AA0F3A-F26E-42D8-904E-89C69159A410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57AA0F3A-F26E-42D8-904E-89C69159A410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57AA0F3A-F26E-42D8-904E-89C69159A410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57AA0F3A-F26E-42D8-904E-89C69159A410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{555026A2-3F80-4DC9-9794-3F1FAED38CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{555026A2-3F80-4DC9-9794-3F1FAED38CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{555026A2-3F80-4DC9-9794-3F1FAED38CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{555026A2-3F80-4DC9-9794-3F1FAED38CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397D06AB-009D-4AEC-B806-0A67580474DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397D06AB-009D-4AEC-B806-0A67580474DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397D06AB-009D-4AEC-B806-0A67580474DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397D06AB-009D-4AEC-B806-0A67580474DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
