@@ -10,6 +10,12 @@ public class UserService : IUserService
     private IUnitOfWork _unitOfWork;
     private UserMapper _userMapper;
     public UserMapper UserMapper => _userMapper ?? new UserMapper();
+
+    public UserService(IUnitOfWork unitOfWork, UserMapper userMapper)
+    {
+        _unitOfWork = unitOfWork;
+        _userMapper = userMapper;
+    }
     public async Task<UserDto> GetUserByIdAsync(int id)
     {
         var entity = await _unitOfWork.UserRepository.GetByIdAsync(id);

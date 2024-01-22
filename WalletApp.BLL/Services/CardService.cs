@@ -10,6 +10,12 @@ public class CardService : ICardService
     private IUnitOfWork _unitOfWork;
     private CardMapper _cardMapper;
     public CardMapper CardMapper => _cardMapper ?? new CardMapper();
+    
+    public CardService(IUnitOfWork unitOfWork, CardMapper cardMapper)
+    {
+        _unitOfWork = unitOfWork;
+        _cardMapper = cardMapper;
+    }
     public async Task<CardDto> GetCardByIdAsync(int id)
     {
         var entity = await _unitOfWork.CardRepository.GetByIdAsync(id);

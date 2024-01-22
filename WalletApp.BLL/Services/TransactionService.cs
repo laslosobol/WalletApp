@@ -10,6 +10,11 @@ public class TransactionService : ITransactionService
     private IUnitOfWork _unitOfWork;
     private TransactionMapper _transactionMapper;
     public TransactionMapper TransactionMapper => _transactionMapper ?? new TransactionMapper();
+    public TransactionService(IUnitOfWork unitOfWork, TransactionMapper transactionMapper)
+    {
+        _unitOfWork = unitOfWork;
+        _transactionMapper = transactionMapper;
+    }
     public async Task<TransactionDto> GetTransactionByIdAsync(int id)
     {
         var entity = await _unitOfWork.TransactionRepository.GetByIdAsync(id);

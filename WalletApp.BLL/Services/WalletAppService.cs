@@ -7,7 +7,12 @@ namespace WalletApp.BLL.Services;
 
 public class WalletAppService : IWalletAppService
 {
-    public IUnitOfWork _unitOfWork;
+    private IUnitOfWork _unitOfWork;
+
+    public WalletAppService(IUnitOfWork unitOfWork)
+    {
+        _unitOfWork = unitOfWork;
+    }
     public async Task<TransactionListResponse> GetTransactionsList(int cardId)
     {
         var card = await _unitOfWork.CardRepository.GetByIdAsync(cardId);
@@ -21,7 +26,7 @@ public class WalletAppService : IWalletAppService
         {
             CardBalance = card.Balance,
             Available = 1500 - card.Balance,
-            DailyPoints = PointHelper.CalculateTotalPoints(user.CreationDate),
+            DailyPoints = PointHelper.CalculatePoints(user.CreationDate),
             TransactionDetailResponses = new List<TransactionDetailResponse>()
         };
 
